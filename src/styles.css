@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700&display=swap');
+
+:root {
+    --bg: #fafafa;
+    --accent: #d87d4a;
+    --accent-light: #fbaf85;
+    --gray: #f1f1f1;
+    --light-gray: #d3d3d3;
+    --white: #fff;
+    --black: #191919;
+    --text: rgba(0,0,0,0.5);
+    --text-light: rgba(255,255,255,0.5);
+    --divider: rgba(255,255,255,0.1);
+    --placeholder: rgba(0,0,0,.4);
+    --input-border: #CFCFCF;
+    --input-error: #CD2C2C;
+    --primary-font-family: 'Manrope', sans-serif;
+}
