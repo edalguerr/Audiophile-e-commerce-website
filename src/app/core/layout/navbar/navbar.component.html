@@ -1,0 +1,47 @@
+<div class="navbar-container">
+
+    <button class="btn btn-menu" (click)="showMenu()">
+        <img src="assets/images/shared/tablet/icon-hamburger.svg" alt="Menu" [ngClass]="btnHamburguerIconClassList">
+    </button>
+
+    <a href="#" class="nav-logo">
+        <img src="assets/images/shared/desktop/logo.svg" alt="Logo" class="nav-logo__icon">
+    </a>
+
+    <ul class="nav-links-container">
+        <li class="nav-item">
+            <a href="#" class="nav-item__link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-item__link">Headphones</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-item__link">Speakers</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-item__link">Earphones</a>
+        </li>
+    </ul>
+
+    <div [ngClass]="modalClassList">
+        <ul class="nav-mobile">
+            <li class="nav-item">
+                <a href="#" class="nav-item__link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-item__link">Headphones</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-item__link">Speakers</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-item__link">Earphones</a>
+            </li>
+        </ul>
+    </div>
+
+    <button class="btn btn-car">
+        <img src="assets/images/shared/desktop/icon-cart.svg" alt="Car shop icon" class="btn-car__icon">
+    </button>
+
+</div>

@@ -1,0 +1,131 @@
+.navbar-container {
+    display: flex;
+    width: 100%;
+    padding: 2rem 0;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--divider);
+}
+
+
+.nav-logo {
+    display: flex;
+}
+
+.nav-logo__icon {
+    height: 25px;
+}
+
+
+.btn-menu {
+    display: none;
+}
+
+
+.modal {
+    display: none;
+}
+
+
+.nav-links-container {
+    width: 50%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+    justify-content: space-evenly;  
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.nav-item__link {    
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15rem;  
+    transition: 0.2s color ease-in-out;
+    color: var(--white);
+}
+
+.nav-item__link:hover {
+    color: var(--accent);
+}
+
+
+.btn {
+    border: 0;
+    background: transparent;    
+    cursor: pointer;
+}
+
+
+.btn-menu__icon--type_close {
+    content: url("../../../../assets/images/shared/tablet/icon-close-menu.svg");
+}
+
+
+@media screen and (max-width: 1200px) {
+    .navbar-container {    
+        position: relative;
+        justify-content: flex-start;
+        gap: 35px;
+    }
+
+    
+    .modal {
+        display: block;  
+        height: 80vh;  
+        width: 100vw;           
+        position: fixed; 
+        top: -100vh;  
+        left: 0;          
+        background: rgba(0, 0, 0, 0.6);
+        transition:  0.5s transform ease-in-out;        
+    }
+    
+    .modal--active {
+        transform: translateY(110vh);                       
+    }
+
+
+    .nav-links-container {
+        display: none;
+    }
+
+
+    .nav-mobile {
+        display: flex;
+        width: 100vw;           
+        margin: 0;     
+        flex-direction: column;
+        background: wheat;       
+    }
+
+
+    .btn-menu {
+        display: inline-block;        
+    }
+
+
+    .btn-car {
+        position: absolute;
+        right: 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar-container {    
+        position: relative;
+        justify-content:space-around;
+        gap: 0;
+    }
+
+
+    .btn-car {
+        position: relative;        
+    }
+}
