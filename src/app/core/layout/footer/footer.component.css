@@ -1,0 +1,147 @@
+.footer-container {
+    display: grid;
+    padding: 60px 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15%;
+    row-gap: 2rem;
+    position: relative;
+}
+
+.footer-container::before {
+    height: 0.25rem;
+    width: 6rem;
+    content: "";
+    position: absolute;
+    top: 0px;
+    background: var(--accent);    
+}
+
+
+.nav-logo {
+    display: flex;
+}
+
+.nav-logo__icon {
+    height: 25px;
+}
+
+
+.nav-links-container {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+    justify-content: space-between;  
+}
+
+.nav-item__link {    
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15rem;  
+    transition: 0.2s color ease-in-out;
+    color: var(--white);
+}
+
+.nav-item__link:hover {
+    color: var(--accent);
+}
+
+
+.social {
+    display: flex;    
+    margin: 0;
+    padding: 0;    
+    gap: 1rem;
+    align-self: end;
+    justify-self: end;
+    list-style: none;
+}
+
+
+.social-network__link {
+    display: flex;
+}
+
+.social-network__icon {
+    height: 25px;
+}
+
+
+.about, .copyright {
+    text-align: justify;
+    color: var(--text-light);
+}
+
+
+.about {
+    margin: 0;
+}
+
+
+.copyright {
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .nav-logo, .nav-links-container, .about {
+        grid-column: 1 / span 2;
+    }
+
+
+    .nav-links-container {
+        width: 65%;
+        padding-bottom: 30px;
+    }
+
+
+    .social {
+        grid-column: 2;
+        grid-row: 4;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        justify-items: center;
+        padding-bottom: 40px;
+    }
+    
+    
+    .nav-links-container {
+        width: 100%;        
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+
+    .about {
+        width: 90%;
+        text-align: center;
+    }
+
+
+    .social {
+        grid-row: 5;
+        grid-column: 1 / span 2;
+        justify-self: center;
+    }
+
+    .social-network__icon {
+        height: 20px;
+    }
+
+    .copyright {
+        grid-row: 4;
+        grid-column: 1 / span 2;
+    }
+}
