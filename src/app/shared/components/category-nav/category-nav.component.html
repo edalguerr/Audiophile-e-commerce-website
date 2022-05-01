@@ -1,0 +1,13 @@
+<div class="category-container">
+    <a [routerLink]="[category.link]" class="card-nav-link" *ngFor="let category of categories">
+        <img src="../../../../assets/images/shared/desktop/image-headphones.png" alt="Image product"
+            [ngClass]="category.classList">
+        <h3 class="card-nav-link__title">
+            {{category.title}}
+        </h3>
+        <a [routerLink]="[category.link]" class="card-nav-link__link">
+            Shop <img src="assets/images/shared/desktop/icon-arrow-right.svg" alt="Icon"
+                class="card-nav-link__link-icon">
+        </a>
+    </a>
+</div>

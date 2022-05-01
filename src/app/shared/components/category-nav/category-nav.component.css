@@ -1,0 +1,85 @@
+.category-container {
+    display: flex;
+    gap: 40px;
+}
+
+.card-nav-link {
+    display: flex;
+    box-sizing: border-box;
+    width: 33%;   
+    height: 180px; 
+    padding: 2rem 0 1.5rem;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-decoration: none;
+    border-radius: 15px;
+    background: var(--gray); 
+}
+
+.card-nav-link:focus {
+    outline: 2px dashed var(--accent);
+    outline-offset: 2px;
+}
+
+.card-nav-link__image {
+    width: 140px;
+    position: absolute;
+    top: -45px;
+}
+
+.card-nav-link__image--Speakers {
+    content: url("../../../../assets/images/shared/desktop/image-speakers.png");
+}
+
+.card-nav-link__image--Earphones {
+    content: url("../../../../assets/images/shared/desktop/image-earphones.png");
+}
+
+.card-nav-link__title {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color: var(--black);
+}
+
+.card-nav-link__link {
+    font-size: 0.8rem;
+    font-weight: bold;    
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.card-nav-link__link:hover {
+    color: var(--accent);
+}
+
+.card-nav-link__link-icon {
+    padding-left: 10px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .category-container {        
+        gap: 10px;
+    }
+
+    .card-nav-link__title {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .category-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .card-nav-link {
+        width: 90%;
+    }
+}

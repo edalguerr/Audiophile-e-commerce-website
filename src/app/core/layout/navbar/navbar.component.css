@@ -77,17 +77,18 @@
     
     .modal {
         display: block;  
-        height: 80vh;  
+        height: 200vh;  
         width: 100vw;           
-        position: fixed; 
-        top: -100vh;  
-        left: 0;          
+        position: absolute; 
+        top: -230vh;  
+        left: -45px;      
+        z-index: 2;    
         background: rgba(0, 0, 0, 0.6);
         transition:  0.5s transform ease-in-out;        
     }
     
     .modal--active {
-        transform: translateY(110vh);                       
+        transform: translateY(240vh);                       
     }
 
 
@@ -98,10 +99,12 @@
 
     .nav-mobile {
         display: flex;
+        box-sizing: border-box;
         width: 100vw;           
         margin: 0;     
+        padding: 4rem 1rem;
         flex-direction: column;
-        background: wheat;       
+        background: #fff;       
     }
 
 
@@ -127,5 +130,11 @@
 
     .btn-car {
         position: relative;        
+    }
+
+
+    .modal { 
+        padding: 0;
+        left: 0;
     }
 }
