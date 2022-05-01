@@ -1,4 +1,4 @@
-<div class="category-container">
+<div class="category-container" [ngsReveal]="{ delay:700, duration:1000, easing: 'ease-in-out'}">
     <a [routerLink]="[category.link]" class="card-nav-link" *ngFor="let category of categories">
         <img src="../../../../assets/images/shared/desktop/image-headphones.png" alt="Image product"
             [ngClass]="category.classList">

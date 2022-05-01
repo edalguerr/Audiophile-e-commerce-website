@@ -5,10 +5,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import {NgsRevealModule} from 'ngx-scrollreveal';
 
 import { HomeComponent } from './home.component';
+import { MainProductsGridComponent } from './components/main-products-grid/main-products-grid.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    MainProductsGridComponent
   ],
   imports: [
     CommonModule,

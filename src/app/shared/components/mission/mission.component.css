@@ -1,0 +1,69 @@
+.mission {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mission-description__title {    
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+    color: var(--black);
+}
+
+.mission-description__keyword {
+    color: var(--accent);
+}
+
+.mission-description__description {
+    text-align: justify;
+}
+
+.mission__image {
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    .mission {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    
+    .mission__image {        
+        width: 100%;
+        content: url("../../../../assets/images/shared/tablet/image-best-gear.jpg");
+    }
+
+    .mission-description__title {
+        text-align: center;
+    }
+
+    .mission-description__description {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        line-height: 1.8rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .mission {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .mission-description__title {
+        width: 100%;        
+        font-size: 1.9rem;
+        line-height: 2.5rem;
+    }
+
+    .mission-description__description {
+        width: 95%;
+    }
+
+    .mission__image {                
+        content: url("../../../../assets/images/shared/mobile/image-best-gear.jpg");
+    }
+}

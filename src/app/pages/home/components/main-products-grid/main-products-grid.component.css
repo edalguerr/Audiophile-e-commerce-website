@@ -1,0 +1,174 @@
+.grid-category-main-products {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.product-first-speaker {
+    grid-column: 1 / span 2;
+    border-radius: 15px;
+    background-color: var(--accent);
+}
+
+.product-first-speaker__pattern {
+    display: flex;
+    padding: 7rem 6rem 0;
+    overflow: hidden;
+    justify-content: space-between;
+    background: url("../../../../../assets/images/home/desktop/pattern-circles.svg") center/cover no-repeat;
+    background-position: -17rem -10rem;
+}
+
+.product-item__image {
+    width: 400px;
+    margin-bottom: -1rem;
+}
+
+
+.product-description {
+    width: 35%;
+    margin-top: 15px;
+}
+
+.product-description__title {
+    margin: 0;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    line-height: 3.5rem;
+    letter-spacing: 0.5rem;
+    color: var(--white);
+}
+
+.product-description__description {
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    line-height: 1.5rem;
+    color: var(--white);
+}
+
+
+.product-second-speaker {
+    display: flex;
+    height: 300px;
+    padding: 0 7rem;
+    border-radius: 10px;
+    grid-column: 1 / span 2;
+    align-items: center;
+    background: url("../../../../../assets/images/home/desktop/image-speaker-zx7.jpg") right/cover no-repeat;
+}
+
+.product-description-second-speaker__title {
+    font-size: 1.8rem;
+    letter-spacing: 0rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.product-item-earphones {
+    display: flex;
+    padding: 4rem 1rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--gray);
+}
+
+.product-earphones-description {
+    width: 80%;
+}
+
+.product-earphones__image {
+    border-radius: 15px;
+    background: url("../../../../../assets/images/home/desktop/image-earphones-yx1.jpg") center/cover no-repeat;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .grid-category-main-products {
+        column-gap: 13px;
+        row-gap: 30px;
+    }
+    
+    .product-description {
+        display: flex;        
+        width: 80%;
+        padding: 3rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-first-speaker__pattern {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item__image {
+        width: 200px;
+        content: url("../../../../../assets/images/home/tablet/image-speaker-zx9.png");
+    }
+
+    .product-second-speaker {
+        padding: 0 3rem;
+        background: url("../../../../../assets/images/home/tablet/image-speaker-zx7.jpg") right/cover no-repeat;
+    }
+
+    .product-earphones__image {
+        background: url("../../../../../assets/images/home/tablet/image-earphones-yx1.jpg") center/cover no-repeat;
+    }
+
+    .product-item-earphones {
+        padding: 4rem 1.5rem;
+    }
+
+    .product-earphones-description {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .grid-category-main-products {
+        display: flex;
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+    }
+    
+    .product-first-speaker__pattern {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5rem 1rem 0rem;
+    }
+
+    .product-item__image {
+        width: 150px;
+        content: url("../../../../../assets/images/home/mobile/image-speaker-zx9.png");
+    }
+
+    .product-description__title {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .product-description__description {
+        margin-bottom: 4rem;
+    }
+
+    .product-second-speaker {
+        padding: 0 1rem;
+        background: url("../../../../../assets/images/home/mobile/image-speaker-zx7.jpg") right/cover no-repeat;
+    }
+
+    .product-earphones__image {
+        height: 270px;
+        background: url("../../../../../assets/images/home/mobile/image-earphones-yx1.jpg") center/cover no-repeat;
+    }
+}
