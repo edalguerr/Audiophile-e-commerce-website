@@ -1,0 +1,20 @@
+<div [ngClass]="productData.classList">
+
+    <div class="product-card-image">
+        <img [src]="productData.img"
+            alt="Product image" class="product-card-image__image">
+    </div>
+    <div class="product-card-description">
+        <p class="product-card-description__new-stock" *ngIf="productData.new">
+            New Product
+        </p>
+        <h3 class="product-card-description__title">
+            {{productData.title}}
+        </h3>
+        <p class="product-card-description__description">
+            {{productData.description}}
+        </p>
+        <app-button-link [dataBtn]="dataBtn"></app-button-link>
+    </div>
+
+</div>

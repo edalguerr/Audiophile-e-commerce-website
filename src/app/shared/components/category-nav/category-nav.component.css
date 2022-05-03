@@ -3,6 +3,10 @@
     gap: 40px;
 }
 
+.category-container--opacity_1 {
+    opacity: 1 !important;
+}
+
 .card-nav-link {
     display: flex;
     box-sizing: border-box;
@@ -12,7 +16,7 @@
     position: relative;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     text-decoration: none;
     border-radius: 15px;
     background: var(--gray); 

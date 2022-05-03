@@ -1,11 +1,12 @@
-<div class="category-container" [ngsReveal]="{ delay:700, duration:1000, easing: 'ease-in-out'}">
-    <a [routerLink]="[category.link]" class="card-nav-link" *ngFor="let category of categories">
+<div [ngClass]="categoryContainerClassList" [ngsReveal]="ngsRevealOptions">
+    <a [routerLink]="[category.link]" class="card-nav-link" 
+    *ngFor="let category of categories" (click)="redirect()">
         <img src="../../../../assets/images/shared/desktop/image-headphones.png" alt="Image product"
             [ngClass]="category.classList">
         <h3 class="card-nav-link__title">
             {{category.title}}
         </h3>
-        <a [routerLink]="[category.link]" class="card-nav-link__link">
+        <a [routerLink]="[category.link]" class="card-nav-link__link" (click)="redirect()">
             Shop <img src="assets/images/shared/desktop/icon-arrow-right.svg" alt="Icon"
                 class="card-nav-link__link-icon">
         </a>

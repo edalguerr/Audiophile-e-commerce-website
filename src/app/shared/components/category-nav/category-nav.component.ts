@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-category-nav',
@@ -7,19 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryNavComponent implements OnInit {
 
+  @Input() ngsRevealOptions = { delay:700, duration:1000, easing: 'ease-in-out'};
+  @Input() categoryContainerClassList = ["category-container"];
+  @Output() changeCategory = new EventEmitter();
   categories = [
     {
-      link: "#",
+      link: "/headphones",
       classList: ["card-nav-link__image"],
       title: "Headphones"
     },
     {
-      link: "#",
+      link: "/speakers",
       classList: ["card-nav-link__image", "card-nav-link__image--Speakers"],
       title: "Speakers"
     },
     {
-      link: "#",
+      link: "/earphones",
       classList: ["card-nav-link__image", "card-nav-link__image--Earphones"],
       title: "Earphones"
     }
@@ -30,4 +33,8 @@ export class CategoryNavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  redirect() {
+    this.changeCategory.emit();
+  }
+  
 }

@@ -1,0 +1,13 @@
+<div class="header-container">
+    <header class="category-product">
+        <h1 class="category-product__title">{{category}}</h1>
+    </header>
+</div>
+
+<main class="main-container">        
+    <app-full-product-card *ngFor="let product of products" 
+    [productData]="product" [ngsReveal]="ngsRevealOptions">
+    </app-full-product-card>
+    <app-category-nav></app-category-nav>    
+    <app-mission></app-mission>
+</main>

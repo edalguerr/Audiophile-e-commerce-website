@@ -49,6 +49,9 @@
     color: var(--accent);
 }
 
+.nav-item__link--active {
+    color: var(--accent);
+}
 
 .social {
     display: flex;    

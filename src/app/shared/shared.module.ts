@@ -6,6 +6,7 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
 import { ButtonLinkComponent } from './components/buttons/button-link/button-link.component';
 import { CategoryNavComponent } from './components/category-nav/category-nav.component';
 import { MissionComponent } from './components/mission/mission.component';
+import { FullProductCardComponent } from './components/full-product-card/full-product-card.component';
 
 
 
@@ -13,7 +14,8 @@ import { MissionComponent } from './components/mission/mission.component';
   declarations: [
     ButtonLinkComponent,
     CategoryNavComponent,
-    MissionComponent
+    MissionComponent,
+    FullProductCardComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { MissionComponent } from './components/mission/mission.component';
   exports: [
     ButtonLinkComponent,
     CategoryNavComponent,
-    MissionComponent
+    MissionComponent,
+    FullProductCardComponent
   ]
 })
 export class SharedModule { }

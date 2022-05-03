@@ -1,20 +1,24 @@
-<div class="footer-container">
-    <a href="#" class="nav-logo">
+<div class="footer-container" [ngsReveal]="{delay:500, duration:1000, easing: 'ease-in-out'}">
+    <a routerLink="/" class="nav-logo">
         <img src="assets/images/shared/desktop/logo.svg" alt="Logo" class="nav-logo__icon">
     </a>
 
     <ul class="nav-links-container">
         <li class="nav-item">
-            <a href="#" class="nav-item__link">Home</a>
+            <a routerLink="/" routerLinkActive="nav-item__link--active" 
+            [routerLinkActiveOptions]="linkActiveOption" class="nav-item__link">Home</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-item__link">Headphones</a>
+            <a routerLink="/headphones" routerLinkActive="nav-item__link--active"
+                [routerLinkActiveOptions]="linkActiveOption" class="nav-item__link">Headphones</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-item__link">Speakers</a>
+            <a routerLink="/speakers" routerLinkActive="nav-item__link--active"
+                [routerLinkActiveOptions]="linkActiveOption" class="nav-item__link">Speakers</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-item__link">Earphones</a>
+            <a routerLink="/earphones" routerLinkActive="nav-item__link--active"
+                [routerLinkActiveOptions]="linkActiveOption" class="nav-item__link">Earphones</a>
         </li>
     </ul>
 
@@ -26,21 +30,18 @@
 
     <ul class="social">
         <li class="social-network">
-            <a href="#" class="social-network__link">
-                <img src="assets/images/shared/desktop/icon-facebook.svg" alt="Facebook"
-                    class="social-network__icon">
+            <a routerLink="/" class="social-network__link">
+                <img src="assets/images/shared/desktop/icon-facebook.svg" alt="Facebook" class="social-network__icon">
             </a>
         </li>
         <li class="social-network">
-            <a href="#" class="social-network__link">
-                <img src="assets/images/shared/desktop/icon-twitter.svg" alt="Twitter"
-                    class="social-network__icon">
+            <a routerLink="/" class="social-network__link">
+                <img src="assets/images/shared/desktop/icon-twitter.svg" alt="Twitter" class="social-network__icon">
             </a>
         </li>
         <li class="social-network">
-            <a href="#" class="social-network__link">
-                <img src="assets/images/shared/desktop/icon-instagram.svg" alt="Instagram"
-                    class="social-network__icon">
+            <a routerLink="/" class="social-network__link">
+                <img src="assets/images/shared/desktop/icon-instagram.svg" alt="Instagram" class="social-network__icon">
             </a>
         </li>
     </ul>

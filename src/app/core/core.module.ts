@@ -5,6 +5,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { MainContainerComponent } from './layout/main-container.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
+import { NgsRevealModule } from 'ngx-scrollreveal';
 
 
 
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    NgsRevealModule
   ],
   exports: [
     MainContainerComponent

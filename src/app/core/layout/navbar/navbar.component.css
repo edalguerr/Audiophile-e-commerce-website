@@ -54,6 +54,9 @@
     color: var(--accent);
 }
 
+.nav-item__link--active {
+    color: var(--accent);
+}
 
 .btn {
     border: 0;
@@ -91,6 +94,9 @@
         transform: translateY(240vh);                       
     }
 
+    .modal--inactive {
+        top: -230vh;
+    }
 
     .nav-links-container {
         display: none;
