@@ -1,8 +1,7 @@
 <div [ngClass]="productData.classList">
 
     <div class="product-card-image">
-        <img [src]="productData.img"
-            alt="Product image" class="product-card-image__image">
+        <img [src]="productData.img" alt="Product image" class="product-card-image__image">
     </div>
     <div class="product-card-description">
         <p class="product-card-description__new-stock" *ngIf="productData.new">
@@ -14,7 +13,18 @@
         <p class="product-card-description__description">
             {{productData.description}}
         </p>
-        <app-button-link [dataBtn]="dataBtn"></app-button-link>
+        <app-button-link [dataBtn]="dataBtn" *ngIf="!productData.cardShop; else formShop"></app-button-link>
+        <ng-template #formShop>
+            <div class="product-card-shop-info">
+                <p class="product-card-shop-info__price">{{productData.price | currency:'USD':'symbol':'1.0-0'}}</p>
+                <div class="btn-counter">
+                    <button class="btn-counter__minus" (click)="counterDown()">-</button>
+                    <label class="btn-counter__label">{{counter}}</label>
+                    <button class="btn-counter__plus" (click)="counterUp()">+</button>
+                </div>
+                <app-button-link [dataBtn]="dataBtnAlt" class="product-card-shop-info__btn-add-cart"></app-button-link>
+            </div>
+        </ng-template>
     </div>
 
 </div>

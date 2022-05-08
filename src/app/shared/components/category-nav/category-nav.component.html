@@ -1,7 +1,7 @@
 <div [ngClass]="categoryContainerClassList" [ngsReveal]="ngsRevealOptions">
     <a [routerLink]="[category.link]" class="card-nav-link" 
     *ngFor="let category of categories" (click)="redirect()">
-        <img src="../../../../assets/images/shared/desktop/image-headphones.png" alt="Image product"
+        <img src="assets/images/shared/desktop/image-headphones.png" alt="Image product"
             [ngClass]="category.classList">
         <h3 class="card-nav-link__title">
             {{category.title}}
