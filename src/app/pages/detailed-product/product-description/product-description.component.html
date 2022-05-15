@@ -1,0 +1,22 @@
+<div class="product-description-container">
+
+    <div class="features">
+        <h2 class="features__title">Features</h2>
+        <p class="features__description">
+            {{product.features}}
+        </p>
+    </div>
+
+    <div class="accesories">
+        <h2 class="accesories__title">In the box</h2>
+        <ul class="accesories-items">
+            <li class="accesories-item" *ngFor="let item of product.items">
+                <p class="accesories-item__name">
+                    <span class="accesories-item__quantity">{{item.quantity}}x</span>
+                    {{item.name}}
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+

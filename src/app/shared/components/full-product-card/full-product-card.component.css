@@ -85,6 +85,10 @@
     background: var(--gray);
 }
 
+.btn-counter__minus:hover, .btn-counter__plus:hover {
+    background: var(--input-border);
+}
+
 
 .product-card-shop-info__btn-add-cart {
     grid-column: 2 / span 1;

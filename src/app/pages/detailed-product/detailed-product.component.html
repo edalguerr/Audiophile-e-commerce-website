@@ -1,1 +1,8 @@
-<app-full-product-card [productData]="currentProductData"></app-full-product-card>
+<div class="product-detailed">
+    <div class="breadcrumb-nav">
+        <button class="breadcrumb-nav__item" (click)="goBackNav()">Go Back</button>
+    </div>
+    <app-full-product-card [productData]="currentProductData"></app-full-product-card>
+    <app-product-description [product]="productFeature"></app-product-description>
+    <app-product-images></app-product-images>
+</div>

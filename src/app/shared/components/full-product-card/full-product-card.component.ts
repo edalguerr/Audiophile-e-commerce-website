@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router, UrlSegment } from '@angular/router';
+import { Router, UrlSegment } from '@angular/router';
 
 @Component({
   selector: 'app-full-product-card',
@@ -31,19 +31,22 @@ export class FullProductCardComponent implements OnInit {
 
   counter = 0;
 
-  constructor(private activatedRoute: ActivatedRoute, private router:Router) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
-    if(this.dataBtn.link.length < 1){
+    if(this.productData.cardShop){
       this.dataBtn.link = this.router.routerState.snapshot.url;
       this.dataBtnAlt.link = this.router.routerState.snapshot.url;
-
-      this.router.events.subscribe((event:any)=>{        
+     /* this.router.events.subscribe((event:any)=>{        
         this.dataBtn.link = event.url;
         this.dataBtnAlt.link = event.url;
-      })
+      })*/
       
+    } else {
+      this.dataBtn.link = this.productData.link;
+      this.dataBtnAlt.link = this.productData.link;
     }
+
   }
 
 

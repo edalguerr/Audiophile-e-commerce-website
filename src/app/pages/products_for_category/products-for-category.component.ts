@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { title } from 'process';
 
 @Component({
   selector: 'app-products-for-category',
@@ -39,7 +40,7 @@ export class ProductsForCategoryComponent implements OnInit {
 
     if(this.category.toLowerCase() == this.categories.headphones){
            
-    } else if (this.category.toLocaleLowerCase() == this.categories.earphones){
+    } else if (this.category.toLowerCase() == this.categories.earphones){
 
     } else if (this.category.toLowerCase() == this.categories.speakers){
 
@@ -55,7 +56,8 @@ export class ProductsForCategoryComponent implements OnInit {
         description: `The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines 
                       your premium headphone experience by reproducing the balanced depth and precision 
                       of studio-quality sound.`,
-        link: "",
+        //TODO: mejorar la asignacion de los enlaces
+        link: `/${this.category.toLowerCase()}/${"XX99 Mark II Headphones".split(" ").join("-").toLowerCase()}`,
         img: `${imgSrc}/image-xx99-mark-two.jpg`,
         new: true,
         classList: classListPar
@@ -65,7 +67,7 @@ export class ProductsForCategoryComponent implements OnInit {
         description: `As the gold standard for headphones, the classic XX99 Mark I offers detailed and 
                       accurate audio reproduction for audiophiles, mixing engineers, and music aficionados 
                       alike in studios and on the go.`,
-        link: "",
+        link: "/audiophile/prueba",
         img: `${imgSrc}/image-xx99-mark-one.jpg`,
         new: false,
         classList: classListImpar
